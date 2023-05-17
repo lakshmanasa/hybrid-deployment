@@ -7,7 +7,7 @@ http://www.mulesoft.org/schema/mule/db http://www.mulesoft.org/schema/mule/db/cu
 http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd">
 
 	<flow name="post-account-dbsapi" doc:id="1278259e-05ea-45bc-bee6-c38c53bd2940" >
-		<db:insert doc:name="Insert" doc:id="a78d813e-a2d5-41ab-8d3a-78437c40b78f" config-ref="Database_Config">
+		<db:insert doc:name="Inserts" doc:id="a78d813e-a2d5-41ab-8d3a-78437c40b78f" config-ref="Database_Config">
 			<db:sql ><![CDATA[insert into account values(:accname,:accnumber,:firstname,:lastname,:middlename,:phn,:email)]]></db:sql>
 			<db:input-parameters ><![CDATA[#[{
 	accname: payload.AccountName,
